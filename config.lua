@@ -22,7 +22,7 @@ lvim.format_on_save = {
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
+lvim.keys.normal_mode["<C-q>"] = ":bd<cr>"
 lvim.keys.normal_mode["Q"] = ":q!<cr>"
 lvim.keys.normal_mode["<C-e>"] = ":Ranger<CR>"
 
