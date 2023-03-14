@@ -110,6 +110,7 @@ lvim.plugins = {
   { "francoiscabrol/ranger.vim" },
   { "navarasu/onedark.nvim" },
   { "tpope/vim-surround" },
+  { "lilydjwg/colorizer" },
 }
 
 require('onedark').setup {
