@@ -35,7 +35,7 @@ lvim.keys.normal_mode["<C-e>"] = ":Ranger<CR>"
 
 -- -- Change theme settings
 -- lvim.colorscheme = "lunar"
-lvim.colorscheme = "ayu"
+lvim.colorscheme = "monokai"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -112,6 +112,7 @@ lvim.plugins = {
   { "tpope/vim-surround" },
   { "lilydjwg/colorizer" },
   { "ayu-theme/ayu-vim" },
+  { "tanvirtin/monokai.nvim" },
 }
 
 require('onedark').setup {
