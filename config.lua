@@ -8,6 +8,9 @@ vim.opt.tabstop = 2
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 99999
 
+-- Bug fix
+vim.opt.title = false
+
 -- general
 lvim.log.level = "info"
 lvim.format_on_save = {
@@ -25,6 +28,8 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-q>"] = ":bd<cr>"
 lvim.keys.normal_mode["Q"] = ":q!<cr>"
 lvim.keys.normal_mode["<C-e>"] = ":Ranger<CR>"
+lvim.keys.normal_mode["<C-l>"] = "A<Space>{<Enter>}<esc>O"
+lvim.keys.insert_mode["<C-l>"] = "<Esc>A<Space>{<Enter>}<Esc>O"
 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
@@ -36,6 +41,7 @@ lvim.keys.normal_mode["<C-e>"] = ":Ranger<CR>"
 -- -- Change theme settings
 -- lvim.colorscheme = "lunar"
 lvim.colorscheme = "monokai"
+-- lvim.colorscheme = "onedark"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -113,10 +119,14 @@ lvim.plugins = {
   { "lilydjwg/colorizer" },
   { "ayu-theme/ayu-vim" },
   { "tanvirtin/monokai.nvim" },
+  { "amarakon/nvim-cmp-fonts" },
+  { "endel/vim-github-colorscheme" },
 }
 
+table.insert(lvim.builtin.cmp.sources, { name = "fonts" })
+
 require('onedark').setup {
-  style = 'deep', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+  style = 'light', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
 }
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
