@@ -30,6 +30,7 @@ lvim.keys.normal_mode["Q"] = ":q!<cr>"
 lvim.keys.normal_mode["<C-e>"] = ":Ranger<CR>"
 lvim.keys.normal_mode["<C-l>"] = "A<Space>{<Enter>}<esc>O"
 lvim.keys.insert_mode["<C-l>"] = "<Esc>A<Space>{<Enter>}<Esc>O"
+lvim.keys.visual_mode["<C-r>"] = '"hy:%s/<C-r>h//g<left><left>'
 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
