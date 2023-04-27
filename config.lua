@@ -41,7 +41,7 @@ lvim.keys.visual_mode["<C-r>"] = '"hy:%s/<C-r>h//g<left><left>'
 
 -- -- Change theme settings
 -- lvim.colorscheme = "lunar"
-lvim.colorscheme = "monokai"
+lvim.colorscheme = "onedarkhc"
 -- lvim.colorscheme = "onedark"
 
 lvim.builtin.alpha.active = true
@@ -49,7 +49,7 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
-lvim.builtin.autopairs.active = false
+lvim.builtin.autopairs.active = true
 lvim.builtin.bufferline.active = false
 
 -- Automatically install missing parsers when entering buffer
@@ -122,13 +122,15 @@ lvim.plugins = {
   { "tanvirtin/monokai.nvim" },
   { "amarakon/nvim-cmp-fonts" },
   { "endel/vim-github-colorscheme" },
+  { "iibe/gruvbox-high-contrast" },
+  { "pacokwon/onedarkhc.vim" },
 }
 
-table.insert(lvim.builtin.cmp.sources, { name = "fonts" })
+-- table.insert(lvim.builtin.cmp.sources, { name = "fonts" })
 
-require('onedark').setup {
-  style = 'light', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
-}
+-- require('onedark').setup {
+--   style = 'light', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+-- }
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
 -- vim.api.nvim_create_autocmd("FileType", {
