@@ -41,7 +41,8 @@ lvim.keys.visual_mode["<C-r>"] = '"hy:%s/<C-r>h//g<left><left>'
 
 -- -- Change theme settings
 -- lvim.colorscheme = "lunar"
-lvim.colorscheme = "onedarkhc"
+-- lvim.colorscheme = "onedarkhc"
+lvim.colorscheme = "gruvbox"
 -- lvim.colorscheme = "onedark"
 
 lvim.builtin.alpha.active = true
@@ -124,6 +125,7 @@ lvim.plugins = {
   { "endel/vim-github-colorscheme" },
   { "iibe/gruvbox-high-contrast" },
   { "pacokwon/onedarkhc.vim" },
+  { "ellisonleao/gruvbox.nvim" },
 }
 
 -- table.insert(lvim.builtin.cmp.sources, { name = "fonts" })
