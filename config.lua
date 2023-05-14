@@ -46,6 +46,7 @@ lvim.keys.normal_mode["<C-y>"] = ":%y+<CR>"
 
 -- -- Change theme settings
 -- lvim.colorscheme = "lunar"
+-- lvim.colorscheme = "onedarkhc"
 lvim.colorscheme = "gruvbox"
 -- lvim.colorscheme = "onedark"
 
