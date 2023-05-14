@@ -31,6 +31,11 @@ lvim.keys.normal_mode["<C-e>"] = ":Ranger<CR>"
 lvim.keys.normal_mode["<C-l>"] = "A<Space>{<Enter>}<esc>O"
 lvim.keys.insert_mode["<C-l>"] = "<Esc>A<Space>{<Enter>}<Esc>O"
 lvim.keys.visual_mode["<C-r>"] = '"hy:%s/<C-r>h//g<left><left>'
+lvim.keys.insert_mode["<C-b>"] = "<Esc>:CccPick<CR>"
+lvim.keys.normal_mode["<C-b>"] = "<Esc>:CccPick<CR>"
+lvim.keys.normal_mode["<C-]>"] = "<C-6>"
+lvim.keys.normal_mode["<C-[>"] = "<C-6>"
+lvim.keys.normal_mode["<C-y>"] = ":%y+<CR>"
 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
@@ -41,11 +46,12 @@ lvim.keys.visual_mode["<C-r>"] = '"hy:%s/<C-r>h//g<left><left>'
 
 -- -- Change theme settings
 -- lvim.colorscheme = "lunar"
-lvim.colorscheme = "onedarkhc"
+lvim.colorscheme = "gruvbox"
 -- lvim.colorscheme = "onedark"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
+lvim.transparent_window = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
@@ -124,7 +130,21 @@ lvim.plugins = {
   { "endel/vim-github-colorscheme" },
   { "iibe/gruvbox-high-contrast" },
   { "pacokwon/onedarkhc.vim" },
+  { "uga-rosa/ccc.nvim" },
+  { "MunifTanjim/nui.nvim" },
+  { "rcarriga/nvim-notify" },
+  {
+    "folke/noice.nvim",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+  },
+  { "ellisonleao/gruvbox.nvim" },
+  { "christoomey/vim-tmux-navigator" },
+  { "fatih/vim-go" },
 }
+
 
 -- table.insert(lvim.builtin.cmp.sources, { name = "fonts" })
 
