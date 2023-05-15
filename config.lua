@@ -22,6 +22,7 @@ lvim.format_on_save = {
 -- lvim.use_icons = false
 
 -- keymappings <https://www.lunarvim.org/docs/configuration/keybindings>
+
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
@@ -31,6 +32,9 @@ lvim.keys.normal_mode["<C-e>"] = ":Ranger<CR>"
 lvim.keys.normal_mode["<C-l>"] = "A<Space>{<Enter>}<esc>O"
 lvim.keys.insert_mode["<C-l>"] = "<Esc>A<Space>{<Enter>}<Esc>O"
 lvim.keys.visual_mode["<C-r>"] = '"hy:%s/<C-r>h//g<left><left>'
+lvim.keys.insert_mode["<C-b>"] = "<Esc>:CccPick<CR>"
+lvim.keys.normal_mode["<C-b>"] = ":CccPick<CR>"
+lvim.keys.normal_mode["<C-y>"] = ":%y+<CR>"
 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
@@ -45,8 +49,6 @@ lvim.keys.visual_mode["<C-r>"] = '"hy:%s/<C-r>h//g<left><left>'
 lvim.colorscheme = "gruvbox"
 -- lvim.colorscheme = "onedark"
 
-lvim.builtin.alpha.active = true
-lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
@@ -121,11 +123,9 @@ lvim.plugins = {
   { "lilydjwg/colorizer" },
   { "ayu-theme/ayu-vim" },
   { "tanvirtin/monokai.nvim" },
-  { "amarakon/nvim-cmp-fonts" },
-  { "endel/vim-github-colorscheme" },
-  { "iibe/gruvbox-high-contrast" },
   { "pacokwon/onedarkhc.vim" },
   { "ellisonleao/gruvbox.nvim" },
+  { "uga-rosa/ccc.nvim" },
 }
 
 -- table.insert(lvim.builtin.cmp.sources, { name = "fonts" })
